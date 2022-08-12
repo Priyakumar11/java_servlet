@@ -35,8 +35,8 @@ public class ProductDAO extends HttpServlet {
 				stud.setProductName(name);
 				HttpSession session = request.getSession();
 				
-				Product p1 = new Product(Integer.parseInt(request.getParameter("productId")), request.getParameter("productName"),request.getParameter("productqty"));
-				session.setAttribute("Product", p1);
+				//Product p1 = new Product(Integer.parseInt(request.getParameter("productId")), request.getParameter("productName"),request.getParameter("productqty"));
+				session.setAttribute("Product", stud);
 				response.sendRedirect("display.jsp");
 				
 			}

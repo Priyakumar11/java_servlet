@@ -58,8 +58,12 @@ public class AssignTeacher extends HttpServlet {
 		// Step 3: Begin Transaction
 		Transaction tx = session.beginTransaction();
 		
-		String hql_teacher= "from Teacher where name='" + nameArray[0] + "'" + " and lname='" + nameArray[1] + "'";
-		List<Teacher> teachers = session.createQuery(hql_teacher).list();
+		String hql_teacher= "from Teacher where name like '%" + nameArray[0] + "%'" + " and lname like '%" + nameArray[1] + "%'";
+	//	System.out.println("hql_teacher: "+hql_teacher);
+		Query quer = session.createQuery(hql_teacher);
+		//System.out.println("quer str: "+quer.getQueryString());
+		//System.out.println("quer: "+quer.getResultList());
+		List<Teacher> teachers = quer.list();
 		
 		String hql_subject = "update Subject s set s.teacher=:n where s.name=:sn";
 		

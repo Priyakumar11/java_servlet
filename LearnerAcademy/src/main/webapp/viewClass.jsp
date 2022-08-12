@@ -11,12 +11,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+
 <title>Insert title here</title>
 </head>
 <body>
-<a href="index.jsp">Back to Main Menu</a><br>
-<a href="addClasses.html">Add Class</a><br>
-<a href="assignSubjectToClass.jsp">Assign Subject to Class</a><br>
+
+
+<a href="index.jsp" class="card">Back to Main Menu</a><br>
+<a href="addClasses.html" class="card">Add Class</a><br>
+<a href="assignSubjectToClass.jsp" class="card">Assign Subject to Class</a><br>
+
+
+
 
 <h1>The Following Classes are listed</h1>
 <%
@@ -52,5 +58,6 @@
 		}
 	%>
 </table>
+
 </body>
 </html>
